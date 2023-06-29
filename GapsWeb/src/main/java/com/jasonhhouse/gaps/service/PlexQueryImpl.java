@@ -79,7 +79,7 @@ public class PlexQueryImpl implements PlexQuery {
         LOGGER.info("queryPlexLibraries()");
 
         HttpUrl url = new HttpUrl.Builder()
-                .scheme("http")
+                .scheme("https")
                 .host(plexServer.getAddress())
                 .port(plexServer.getPort())
                 .addPathSegment("library")
@@ -140,7 +140,7 @@ public class PlexQueryImpl implements PlexQuery {
         LOGGER.info("queryPlexLibraries( {}} )", plexServer);
 
         HttpUrl url = new HttpUrl.Builder()
-                .scheme("http")
+                .scheme("https")
                 .host(plexServer.getAddress())
                 .port(plexServer.getPort())
                 .addQueryParameter("X-Plex-Token", plexServer.getPlexToken())

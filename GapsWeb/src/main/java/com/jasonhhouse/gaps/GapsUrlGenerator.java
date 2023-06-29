@@ -105,7 +105,7 @@ public class GapsUrlGenerator implements UrlGenerator {
     @Override
     public @Nullable HttpUrl generatePlexLibraryUrl(@NotNull PlexServer plexServer,@NotNull  PlexLibrary plexLibrary) {
         return new HttpUrl.Builder()
-                .scheme(HTTP)
+                .scheme(HTTPS)
                 .host(plexServer.getAddress())
                 .port(plexServer.getPort())
                 .addPathSegment(LIBRARY)
@@ -119,7 +119,7 @@ public class GapsUrlGenerator implements UrlGenerator {
     @Override
     public @NotNull HttpUrl generatePlexMetadataUrl(@NotNull PlexServer plexServer, @NotNull PlexLibrary plexLibrary, @NotNull Integer ratingKey) {
         return new HttpUrl.Builder()
-                .scheme(HTTP)
+                .scheme(HTTPS)
                 .host(plexServer.getAddress())
                 .port(plexServer.getPort())
                 .addPathSegment(LIBRARY)
